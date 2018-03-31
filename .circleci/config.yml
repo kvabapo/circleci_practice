@@ -51,6 +51,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
+            cd smoke_tests
             python -m pytest pytest_run.py
 
       #set the path to the test results
