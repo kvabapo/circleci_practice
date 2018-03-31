@@ -3,12 +3,13 @@ import allure
 
 
 class TestClass(object):
-    @allure.step
+
+    @allure.step("test 1")
     def test_one(self):
         x = "this"
         assert 'h' in x
 
-    @allure.step
+    @allure.step("test 2")
     def test_two(self):
         x = "hello"
         assert hasattr(x, 'check')
