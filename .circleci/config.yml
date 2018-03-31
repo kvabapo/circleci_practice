@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - checkout
-      - run: mkdir test-reports
+
       # Download and cache dependencies
       - restore_cache:
           keys:
