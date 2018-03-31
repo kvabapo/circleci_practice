@@ -1,2 +1,2 @@
 # circleci_practice
-Learning how to use CircleCI
+learn how to use CircleCI
