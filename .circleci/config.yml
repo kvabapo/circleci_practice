@@ -51,8 +51,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            cd circleci_practice
-            python -m pytest smoke_tests
+            python -m pytest pytest_run.py
 
       #set the path to the test results
       - store_artifacts:
