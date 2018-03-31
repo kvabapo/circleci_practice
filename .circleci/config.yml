@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - checkout
-
+      - run: mkdir test-reports
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -48,8 +48,10 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python manage.py test
+            python -m pytest smoke_tests
 
       - store_artifacts:
-          path: allure_reports
-          destination: allure_reports
+          path: test-reports/
+          destination: tr1
+      - store_test_results:
+          path: test-reports/
